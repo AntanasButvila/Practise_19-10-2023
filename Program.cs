@@ -22,22 +22,61 @@
 // заданного числа или сообщает, 
 // что третьей цифры нет.
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 100)
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// if (number >= 100)
+// {
+//     while (number >= 1000)
+//     {
+//         number /= 10;
+//         // 12345 / 10 = 1234(number)
+//         // 1234 / 10 = 123 (number)
+//         // number = number / 10;
+//     }
+//     int thirdDigit = number % 10; // 123 % 10 = 3
+//     Console.WriteLine($"Третья цифра в числе {number} => {thirdDigit}");
+// }
+// else
+// {
+//     // number < 100
+//     Console.WriteLine("Число не лежит в интересующем нас диапазоне");
+// }
+
+
+
+
+// Задача №17. Напишите программу, 
+// которая принимает на вход координаты точки (X и Y), 
+// причем X ≠ 0 и Y ≠ 0 и выдаёт номер 
+// четверти плоскости, в которой находится эта точка.
+
+Console.Write("Введите координату по оси ОХ: ");
+int x = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите координату по оси ОY: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+if (x > 0 && y > 0)
 {
-    while (number >= 1000)
-    {
-        number /= 10;
-        // 12345 / 10 = 1234(number)
-        // 1234 / 10 = 123 (number)
-        // number = number / 10;
-    }
-    int thirdDigit = number % 10; // 123 % 10 = 3
-    Console.WriteLine($"Третья цифра в числе {number} => {thirdDigit}");
+    Console.WriteLine("I четверть");
 }
-else
+else if (x < 0 && y > 0)
 {
-    // number < 100
-    Console.WriteLine("Число не лежит в интересующем нас диапазоне");
+    Console.WriteLine("II четверть");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("III четверть");
+}
+else if (x > 0 && y < 0)
+{
+    Console.WriteLine("IV четверть");
+}
+else if (x == 0 && y == 0)
+{
+    Console.WriteLine("Начало координат: (0,0)");
+}
+else // x = 0, y != 0 (0,5) => x = 0, y = 5
+{
+    Console.WriteLine("Точка лежит на оси. Одна из координат равна 0");
 }
