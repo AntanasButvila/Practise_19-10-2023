@@ -109,3 +109,4 @@ int y2 = Convert.ToInt32(Console.ReadLine());
 double d = Math.Sqrt((Math.Pow(x1 - x2, 2)) + (Math.Pow(y1 - y2, 2)));
 // Math.Round(число, кол-во знаков): Math.Round(1.275, 2) => 1.27
 Console.WriteLine($"d = {Math.Round(d, 2)}"); // d до 2 знаков
+Console.WriteLine($"d = {d:f2}"); // {имя:fкол-воз_наков}
