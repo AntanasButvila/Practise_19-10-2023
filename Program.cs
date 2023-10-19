@@ -91,22 +91,58 @@
 
 
 
-Console.Write("Введите х1 : ");
-int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите х1 : ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите у1: ");
-int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите у1: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите х2 : ");
-int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите х2 : ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите у2: ");
-int y2 = Convert.ToInt32(Console.ReadLine());
-// d = distance (расстояние между 2 точками)
-// AB = √(x1 - x2)2 + (y1 - y2)2
-// Math.Sqrt(25) = 5 
-// Math.Pow(число, степень) => Math.Pow(2, 3) => 2*2*2 = 8
-double d = Math.Sqrt((Math.Pow(x1 - x2, 2)) + (Math.Pow(y1 - y2, 2)));
-// Math.Round(число, кол-во знаков): Math.Round(1.275, 2) => 1.27
-Console.WriteLine($"d = {Math.Round(d, 2)}"); // d до 2 знаков
-Console.WriteLine($"d = {d:f2}"); // {имя:fкол-воз_наков}
+// Console.Write("Введите у2: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// // d = distance (расстояние между 2 точками)
+// // AB = √(x1 - x2)2 + (y1 - y2)2
+// // Math.Sqrt(25) = 5 
+// // Math.Pow(число, степень) => Math.Pow(2, 3) => 2*2*2 = 8
+// double d = Math.Sqrt((Math.Pow(x1 - x2, 2)) + (Math.Pow(y1 - y2, 2)));
+// // Math.Round(число, кол-во знаков): Math.Round(1.275, 2) => 1.27
+// Console.WriteLine($"d = {Math.Round(d, 2)}"); // d до 2 знаков
+// Console.WriteLine($"d = {d:f2}"); // {имя:fкол-воз_наков}
+
+
+// Напишите программу, которая принимает
+// на вход число (N) и выдаёт таблицу квадратов чисел 
+// от 1 до N.
+
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+// while
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int start = 1; // Начало
+
+while (start <= N) // start += 1
+{
+    Console.Write($"{Math.Pow(start, 2)}\t");
+    start += 1; //start = start + 1
+}
+
+// for
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+// (точка входа; условие цикла: действие со счетчиком)
+// start++ - это start = start + 1 (Инкремент)
+// start-- - это start = start - 1 (Декремент)
+for (int start = 1; start <= N; start++)
+{
+    Console.Write($"{Math.Pow(start, 2)}\t");
+}
+// int start = 1; // Начало
+
+// while (start <= N) // start += 1
+// {
+//     Console.Write($"{Math.Pow(start, 2)}\t");
+//     start += 1; //start = start + 1
+// }
